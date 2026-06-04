@@ -1,0 +1,26 @@
+SINGULARITY_WITNESS_TRIAGE_KERNEL v1.0
+PURPOSE: local defensive incident compression and response triage
+MODE: observe/report/contain/recover
+NETWORK: none
+
+TOPOLOGY:
+  OUTER_SHELLS: normalize noisy stream
+  INNER_SHELLS: match known danger signatures
+  WITNESS_CORE: compress evidence into stable report
+  00_PHASE: containment pocket for high risk
+  5_PHASE: restored operating coherence
+
+PIPELINE:
+  OBSERVE(input_stream)
+  NORMALIZE(lines -> events)
+  CLASSIFY(patterns -> tags)
+  SCORE(weighted_tags -> 0..100)
+  COMPRESS(findings -> witness_report)
+  RECOMMEND(score -> monitor|investigate|contain)
+  EXPORT(json)
+
+BOUNDARIES:
+  local_only = true
+  no_network = true
+  no_payload_execution = true
+  no_external_targets = true

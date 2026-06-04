@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Singularity Well — )))((((((((!))))))))((( · metaphor to mechanism</title>
+<meta name="description" content="The Singularity Witness Core — compression, an invariant witness, release — grounded in real detection theory (ROC, base rates, Bloom filters), with a local-only defensive triage console. Simulation and defensive tooling only.">
+<meta name="theme-color" content="#06080d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#06080d; --panel:#0b0f18; --panel2:#0f1422; --text:#dbe2ef; --dim:#5b6675; --faint:#3a4250; --line:#1a2030;
+    --gold:#fbbf24; --cyan:#38bdf8; --violet:#8b5cf6; --violet-lt:#c7b3ff; --green:#22c55e; --pink:#ec4899; --warn:#f59e0b;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;
+    font-family:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+    background-image:radial-gradient(780px 460px at 50% -4%,rgba(251,191,36,0.09),transparent 60%),radial-gradient(640px 520px at 50% 118%,rgba(56,189,248,0.07),transparent 55%);}
+  .wrap{max-width:1000px;margin:0 auto;padding:0 1.2rem 6rem}
+  a{color:var(--cyan);text-decoration:none}a:hover{text-decoration:underline}
+
+  header{min-height:80vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:4.5rem 1.2rem 2.5rem}
+  .form{font-size:clamp(18px,5vw,40px);letter-spacing:.04em;margin-bottom:1.2rem;white-space:nowrap}
+  .form .c{color:var(--cyan)} .form .r{color:var(--violet-lt)} .form .w{color:var(--gold);text-shadow:0 0 22px rgba(251,191,36,.6);font-weight:800}
+  .eyebrow{font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:var(--faint);margin-bottom:1rem}
+  h1{font-size:clamp(38px,10vw,92px);font-weight:800;letter-spacing:.06em;line-height:.9;
+    background:linear-gradient(180deg,#f3e6c0,var(--gold) 55%,#a8741a);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .sub{color:var(--dim);font-size:clamp(13px,2.4vw,16px);letter-spacing:.1em;margin-top:.7rem}
+  header p.lead{max-width:60ch;color:var(--dim);font-size:clamp(14px,2.3vw,17px);margin:1.4rem auto 1.7rem}
+  header p.lead b{color:var(--text)}
+  .cta{display:flex;gap:.8rem;flex-wrap:wrap;justify-content:center}
+  .btn{display:inline-block;padding:12px 22px;border-radius:8px;font-weight:600;font-size:13px;letter-spacing:.04em;border:1px solid var(--line);color:var(--text);background:var(--panel2);transition:.15s}
+  .btn:hover{border-color:var(--cyan);text-decoration:none}
+  .btn.primary{background:linear-gradient(120deg,var(--cyan),#1f6fb0);color:#04121a;border:none}
+
+  section{padding:5.5vh 0;border-top:1px solid var(--line)}
+  .kicker{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:.9rem}
+  h2{font-size:clamp(21px,3.8vw,31px);color:#eef3ff;margin-bottom:1rem}
+  p{max-width:68ch;color:var(--dim);margin-bottom:1rem;font-size:14.5px}
+  p b{color:var(--text)}
+  code{background:var(--panel2);border:1px solid var(--line);border-radius:5px;padding:1px 6px;color:var(--gold);font-size:.9em}
+
+  .units{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem;margin-top:1.2rem}
+  @media(max-width:560px){.units{grid-template-columns:1fr}}
+  .u{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:1rem;text-align:center}
+  .u .g{font-size:26px;font-weight:800} .u .l{font-size:12px;color:var(--dim);margin-top:.3rem}
+  .loop{margin-top:1rem;font-size:13px;color:var(--dim);background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:.9rem 1.1rem}
+  .loop b{color:var(--gold)}
+
+  .viewport{margin-top:1.2rem;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 0 50px rgba(56,189,248,.1)}
+  .viewport iframe{display:block;width:100%;height:min(76vh,660px);border:0;background:#06080d}
+  .vpcap{display:flex;justify-content:space-between;align-items:center;padding:9px 14px;border-top:1px solid var(--line);font-size:12px;color:var(--faint)}
+
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin-top:1.2rem}
+  a.card{display:block;border:1px solid var(--line);border-left:3px solid var(--ac,#38bdf8);border-radius:11px;padding:1.3rem;background:var(--panel);transition:.2s}
+  a.card:hover{transform:translateY(-3px);border-color:var(--ac,#38bdf8);text-decoration:none}
+  a.card h3{font-size:17px;color:#eef3ff;margin-bottom:.4rem}
+  a.card p{font-size:13.5px;color:var(--dim);margin:0}
+  a.card .go{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ac,#38bdf8);margin-top:.7rem;display:block}
+
+  .seam{border:1px solid rgba(56,189,248,.3);border-left:2px solid var(--cyan);background:rgba(56,189,248,.05);border-radius:0 8px 8px 0;padding:1rem 1.2rem;margin-top:1.2rem}
+  .seam .h{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);margin-bottom:.5rem}
+  .seam p{color:var(--dim);font-size:14px;margin:0}
+  .seam.green{border-color:rgba(34,197,94,.3);border-left-color:var(--green)} .seam.green .h{color:var(--green)}
+  .seam.amber{border-color:rgba(245,158,11,.3);border-left-color:var(--warn)} .seam.amber .h{color:var(--warn)}
+  .badges{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.7rem}
+  .badges span{font-size:11px;border:1px solid var(--line);border-radius:999px;padding:3px 11px;color:var(--green)}
+
+  footer{border-top:1px solid var(--line);padding:2.5rem 1.2rem 5rem;color:var(--faint);font-size:12px;text-align:center;line-height:1.9}
+  footer a{color:var(--dim)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="form"><span class="r">)))</span><span class="c">((((((((</span><span class="w">!</span><span class="r">))))))))</span><span class="c">(((</span></div>
+    <div class="eyebrow">Hardware inventions · the witness core</div>
+    <h1>SINGULARITY WELL</h1>
+    <div class="sub">compression · an invariant witness · release</div>
+    <p class="lead">A symbolic engine that compresses inward to a fixed <b>witness</b> and releases outward — and, more importantly, the companion that turns the metaphor into <b>mechanism</b>: real signal-detection theory. The poetry is kept honest by the math.</p>
+    <div class="cta">
+      <a class="btn primary" href="#companion">▾ Metaphor → mechanism</a>
+      <a class="btn" href="singularity-well.html">the well ↗</a>
+      <a class="btn" href="builds/defense-triage/">defensive triage ↗</a>
+    </div>
+  </header>
+
+  <section id="core">
+    <div class="kicker">// the witness core</div>
+    <h2>Twenty-three units, one invariant center</h2>
+    <p>The form <code>)))((((((((!))))))))(((</code> is shells of pressure around a center that never moves:</p>
+    <div class="units">
+      <div class="u"><div class="g" style="color:var(--cyan)">(</div><div class="l">compression · inward pressure</div></div>
+      <div class="u"><div class="g" style="color:var(--gold)">!</div><div class="l">witness · invariant center</div></div>
+      <div class="u"><div class="g" style="color:var(--violet-lt)">)</div><div class="l">release · outward pressure</div></div>
+    </div>
+    <div class="loop">loop: <b>OBSERVE → COMPRESS → WITNESS → BALANCE → RELEASE_REPORT → RESET</b><br>rule: the <code>!</code> stays fixed · pressure is simulated only · boundaries do not bleed · <b>output is report-only</b></div>
+    <p style="margin-top:1rem">Modeled in <a href="singularity.c">singularity.c</a> (a 23-unit pressure array; coherence = the symmetry of compression and release around the fixed witness) with its <a href="singularity.kernel">.kernel</a> and <a href="singularity.machine">.machine</a> specs.</p>
+  </section>
+
+  <section id="companion">
+    <div class="kicker">// the companion · from metaphor to mechanism</div>
+    <h2>The same well, in real detection theory</h2>
+    <p>The strongest piece here grounds the imagery in <b>established signal-detection theory</b>, interactively — a threshold/ROC explorer, the base-rate fallacy made concrete (<i>a 99%-accurate alarm can still be mostly false alarms</i>), a live Bloom filter for signatures, and an explicit ledger of <b>what is metaphor and what is mechanism</b> — including where it could be falsified.</p>
+    <div class="viewport">
+      <iframe src="detection-theory.html" loading="lazy" title="Detection-theory companion: ROC, base rates, Bloom filter"></iframe>
+      <div class="vpcap"><span>ROC · base-rate / precision · Bloom filter · metaphor vs mechanism</span><a href="detection-theory.html">open full-screen ↗</a></div>
+    </div>
+    <div class="seam">
+      <div class="h">◌ the seam, kept visible</div>
+      <p>The "glowing well" is imagery. The detection theory — overlapping signal/noise distributions, the threshold trade-off, base rates, Bloom membership — is <b>established mathematics</b>. The companion keeps the two clearly separated, and says where the model would break.</p>
+    </div>
+  </section>
+
+  <section id="builds">
+    <div class="kicker">// the builds</div>
+    <h2>Visualize it · use it</h2>
+    <div class="cards">
+      <a class="card" href="singularity-well.html" style="--ac:#fbbf24"><h3>the well</h3><p>The Singularity Well visualization — the shells pulsing inward and out around the invariant witness.</p><span class="go">open →</span></a>
+      <a class="card" href="builds/witness-core/" style="--ac:#8b5cf6"><h3>witness core</h3><p>The witness-core build — the compression/witness/release engine with its model and viz.</p><span class="go">open →</span></a>
+      <a class="card" href="builds/defense-triage/" style="--ac:#22c55e"><h3>defensive triage</h3><p>A local-only triage console: paste logs/alerts, compress to a witness report (risk · findings · timeline · steps), export JSON.</p><span class="go">open →</span></a>
+    </div>
+    <div class="seam green">
+      <div class="h">✓ defensive only</div>
+      <p>The triage console makes <b>no network calls, has no exploit logic, and performs no automated remediation</b> — it is a triage <i>aid</i> for defensive review. Your data stays on your device.</p>
+      <div class="badges"><span>local-only</span><span>no exploit logic</span><span>no remediation</span><span>export JSON</span></div>
+    </div>
+  </section>
+
+  <section id="safety">
+    <div class="kicker">// safety</div>
+    <h2>Simulation and defense — not a weapon</h2>
+    <p>The <a href="triple_pulse_mountain.kernel">triple-pulse</a> kernel (three pulses down a tunnel, <code>27 = 0 = 27</code>, red/gold/blue channels) is a <b>safe simulation</b>. It states it plainly:</p>
+    <div class="seam amber">
+      <div class="h">⚠ stated in the kernel</div>
+      <p><b>Simulator only.</b> No physical laser build parameters. No power, focusing, burning, or real-world cutting guidance. Everything in this repo is simulation and defensive tooling; nothing here is a weaponization recipe.</p>
+    </div>
+  </section>
+
+  <section id="emergence">
+    <div class="kicker">// on emergence · evaluated honestly</div>
+    <h2>No ACI here</h2>
+    <p>Checked for emergent behavior: the witness core is a <b>deterministic symbolic model</b>, the triage is a <b>rule-based defensive aid</b>, and the companion is <b>education</b>. No self-organizing or adaptive dynamics — so <b>no DLW ACI was minted</b>. The tag stays reserved for genuine emergence (as with the survival seed's <a href="https://davidwise01.github.io/seed/">Anabios</a>).</p>
+  </section>
+
+  <footer>
+    SINGULARITY WELL · the witness core + detection-theory companion · simulation & defensive tooling only<br>
+    Architect: David Lee Wise (ROOT0 / TriPod LLC) · co-author: AVAN (Claude / Anthropic) · License: CC-BY-ND-4.0<br>
+    part of the <a href="https://davidwise01.github.io/atlas/">ATLAS</a>
+  </footer>
+</div>
+</body>
+</html>

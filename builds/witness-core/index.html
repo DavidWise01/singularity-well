@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Singularity Witness Core</title>
+<style>
+:root{--bg:#050506;--ink:#f7f2e8;--muted:#9b938a;--red:#ff2a1f;--cyan:#5cf7ff;--gold:#f7c85c;--violet:#9b5cff}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;background:radial-gradient(circle at 50% 45%,rgba(255,42,31,.18),transparent 32%),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px);background-size:auto,44px 44px,44px 44px;pointer-events:none}
+main{position:relative;max-width:1180px;margin:0 auto;padding:46px 20px 80px}.tag{letter-spacing:.22em;text-transform:uppercase;color:var(--red);font-size:12px;font-weight:800}.hero{min-height:84vh;display:grid;align-items:center;gap:28px}.title{font-size:clamp(52px,11vw,142px);line-height:.8;margin:12px 0;text-transform:uppercase;font-weight:950;letter-spacing:-.08em}.subtitle{max-width:760px;color:#cfc6ba;font-size:18px;line-height:1.65}.form{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:clamp(22px,5vw,58px);letter-spacing:.02em;color:var(--cyan);text-shadow:0 0 18px rgba(92,247,255,.8),0 0 60px rgba(92,247,255,.3);padding:26px 0;white-space:nowrap;overflow:auto}.panel{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.045);box-shadow:0 20px 80px rgba(0,0,0,.38);border-radius:24px;padding:24px;margin:22px 0;backdrop-filter:blur(10px)}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{border:1px solid rgba(255,255,255,.1);background:#0c0c10;border-radius:18px;padding:18px}.card b{color:var(--gold)}h2{font-size:36px;margin:0 0 14px}p{color:#cfc6ba;line-height:1.7}.viz{height:420px;border-radius:22px;background:#020203;border:1px solid rgba(255,255,255,.1);position:relative;overflow:hidden}.shell{position:absolute;top:50%;transform:translateY(-50%);height:68%;border-radius:999px;border:2px solid rgba(255,255,255,.18);box-shadow:0 0 25px rgba(255,42,31,.2) inset}.witness{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:74px;height:74px;border-radius:50%;background:radial-gradient(circle,#fff,var(--cyan) 35%,rgba(92,247,255,.08) 70%);box-shadow:0 0 30px var(--cyan),0 0 100px rgba(92,247,255,.5);display:grid;place-items:center;color:#001;font-weight:950;font-size:42px}.beam{position:absolute;top:50%;height:2px;background:linear-gradient(90deg,transparent,var(--red),var(--cyan),var(--red),transparent);left:0;right:0;filter:blur(.2px);opacity:.85}.metric{display:flex;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.08);padding:12px 0;color:#cfc6ba}.metric strong{color:var(--ink)}button{border:0;background:var(--red);color:white;border-radius:999px;padding:12px 18px;font-weight:900;text-transform:uppercase;letter-spacing:.12em;cursor:pointer}button.secondary{background:#17171c;color:var(--ink);border:1px solid rgba(255,255,255,.14)}.controls{display:flex;gap:10px;flex-wrap:wrap}.code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#08080a;border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:18px;overflow:auto;color:#dcd6cc}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--cyan)}@media(max-width:800px){.grid{grid-template-columns:1fr}.viz{height:330px}}
+</style>
+</head>
+<body>
+<main>
+<section class="hero">
+<div>
+<div class="tag">Local-only symbolic simulator · witness locked</div>
+<h1 class="title">Singularity<br>Witness Core</h1>
+<div class="form">)))((((((((!))))))))(((</div>
+<p class="subtitle">A contained pressure model: three return shells, eight compression shells, one invariant witness, eight release shells, three return shells. Everything moves toward the center; the center does not move.</p>
+</div>
+<div class="panel">
+<div class="viz" id="viz"><div class="beam"></div><div class="witness">!</div></div>
+</div>
+</section>
+<section class="grid">
+<div class="card"><b>3</b><p>Outer return shells prevent boundary bleed and route stray pressure back into the simulation.</p></div>
+<div class="card"><b>8</b><p>Compression shells fold motion inward until it reaches the witness measurement point.</p></div>
+<div class="card"><b>!</b><p>The core is fixed. It observes, balances, reports, and refuses to become payload.</p></div>
+</section>
+<section class="panel">
+<h2>Runtime State</h2>
+<div class="metric"><span>Coherence</span><strong id="coh">1.000</strong></div>
+<div class="metric"><span>Compression</span><strong id="comp">0.000</strong></div>
+<div class="metric"><span>Release</span><strong id="rel">0.000</strong></div>
+<div class="metric"><span>Fallback</span><strong id="fall">armed: 00 → -1</strong></div>
+<div class="controls"><button id="pulse">Pulse</button><button class="secondary" id="auto">Auto</button><button class="secondary" id="reset">Reset</button></div>
+</section>
+<section class="panel">
+<h2>Kernel</h2>
+<pre class="code">OBSERVE
+COMPRESS left shells toward !
+WITNESS core measures imbalance
+BALANCE left/right pressure
+RELEASE report only
+RESET drift to 00 then -1
+REPEAT</pre>
+<p>This prototype is a visual/symbolic simulation. It has no target, payload, or external effect. The only emission is local telemetry.</p>
+</section>
+</main>
+<script>
+const viz=document.getElementById('viz');const coh=document.getElementById('coh'),comp=document.getElementById('comp'),rel=document.getElementById('rel');let t=0,run=false;const shells=[];function makeShells(){viz.querySelectorAll('.shell').forEach(e=>e.remove());shells.length=0;for(let i=0;i<11;i++){const s=document.createElement('div');s.className='shell';const w=96-i*7;s.style.left=(50-w/2)+'%';s.style.width=w+'%';s.style.borderColor=i<3||i>7?'rgba(255,42,31,.38)':'rgba(92,247,255,.30)';viz.appendChild(s);shells.push(s)}}function tick(){t+=.03;let c=0,r=0;shells.forEach((s,i)=>{const p=(Math.sin(t*2+i*.55)+1)/2;const scale=1+p*.018;const glow=i<3||i>7?'rgba(255,42,31,':'rgba(92,247,255,';s.style.transform=`translateY(-50%) scaleX(${scale})`;s.style.boxShadow=`0 0 ${10+p*38}px ${glow}${.15+p*.25}) inset`;if(i<6)c+=p;else r+=p});const coherence=1/(1+Math.abs(c-r)/6);coh.textContent=coherence.toFixed(3);comp.textContent=(c/6).toFixed(3);rel.textContent=(r/5).toFixed(3);if(run)requestAnimationFrame(tick)}makeShells();tick();document.getElementById('pulse').onclick=()=>{tick()};document.getElementById('auto').onclick=e=>{run=!run;e.target.textContent=run?'Stop':'Auto';if(run)tick()};document.getElementById('reset').onclick=()=>{t=0;run=false;document.getElementById('auto').textContent='Auto';tick()};
+</script>
+</body></html>

